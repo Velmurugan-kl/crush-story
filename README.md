@@ -6,7 +6,7 @@ A story-based anonymous website to understand your crush's opinion through a que
 ## Tech Stack
 - **Frontend**: Next.js 14 (App Router)
 - **Backend**: Vercel Serverless Functions
-- **Database**: Vercel Postgres (Free tier)
+- **Database**: Neon Serverless Postgres (Free tier)
 - **Hosting**: Vercel (Free plan)
 
 ## Setup Instructions
@@ -23,14 +23,18 @@ Vercel account
 npm install
 ```
 
-### 3. Database Setup (Vercel Postgres)
+### 3. Database Setup (Neon Postgres)
 1. Go to your Vercel dashboard
-2. Create a new Postgres database
-3. Copy the connection string
-4. Add to `.env.local`:
+2. Navigate to Storage → Connect Store
+3. Select **Neon** (Serverless Postgres)
+4. Follow integration steps
+5. Copy the `DATABASE_URL` connection string
+
+### 4. Configure Environment
+Add to `.env.local`:
 
 ```env
-POSTGRES_URL="your-connection-string"
+DATABASE_URL="your-neon-connection-string"
 ADMIN_PASSWORD="your-secure-password"
 ```
 
